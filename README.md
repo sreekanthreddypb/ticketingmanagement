@@ -1,5 +1,5 @@
 # ticketingmanagement
-ticketing system
+ticketing system build by using python, django, html, css, bootstrap
 
 
 Admin detail (superuser also): 

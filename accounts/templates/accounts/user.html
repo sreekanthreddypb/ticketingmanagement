@@ -1,0 +1,40 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+{%  include 'accounts/status.html' %}
+<h1>user</h1>
+<div class="card card-body">
+  <a class="btn btn-primary  btn-sm btn-block" href="{% url 'create_ticket' customer.id %}">Create Ticket</a>
+</div>
+<div class="row">
+    <div class="col-md">
+    <div class="card card-body">
+    <table class="table table-sm">
+    <tr>
+    <th>Product</th>
+    <th>Category</th>
+    <th>Date Created</th>
+    <th>Status</th>
+    <th>Comment</th>
+    <th>Update</th>
+
+
+    </tr>
+    {% for ticket in tickets %}
+    
+    <tr>
+      <td>{{ticket.title}}</td>
+      <td>{{ticket.category}}</td>
+      <td>{{ticket.date_created}}</td>
+      <td>{{ticket.status}}</td>
+      <td>{{ticket.comment}}</td>
+      <td><a class="btn btn-sm btn-info" href="{% url 'update_ticket' ticket.id %}">Update</a></td>
+ 
+    </tr>
+    {% endfor %}
+    </table>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+
+<h1>tickets</h1>
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="row">
+<div class="col-md">
+<div class="card card-body">
+<h5>Tickets</h5>
+</div>
+<div class="card card-body">
+<table class="table">
+<tr>
+<th>Ticket</th>
+<th>Description</th>
+<th>Created Date</th>
+<th>Customer</th>
+<!Assignee>
+</tr>
+{% for i in tickets %}
+    <tr>
+        <td>{{ i.title }}</td>
+        <td>{{ i.description }}</td>
+        <td>{{ i.date_created }}</td>
+        <td>{{ i.customer }}</td>
+        <td><a class="btn btn-sm btn-info" href="{% url 'update_ticket' i.id %}">Update</a></td>
+        <td><a class="btn btn-sm btn-danger" href="{% url 'delete_ticket' i.id %}">Delete</a></td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+</div>
+
+</div>
+
+{% endblock content %}

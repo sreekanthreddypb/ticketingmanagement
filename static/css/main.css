@@ -1,0 +1,22 @@
+body{
+    background-color: #ebeff5;
+}
+#total-tickets{
+    background-color: #4cb4c7;
+    text-align: center;
+}
+#tickets-open{
+    background-color: #4cb4c7;
+}
+#tickets-resolved{
+    background-color: #bdff6d;
+}
+#tickets-pending{
+    background-color: #4cb4c7;
+}
+
+#tickets-inprogess{
+    background-color: #4cb4c7;
+}
+
+
